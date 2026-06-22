@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="CSS/style.css"> 
     <title>UHAMBO OLUMYOLI</title>
 </head>
 <body>
@@ -11,7 +14,7 @@
     <nav>
    <div class="brand">
     <div class="logo">
-        <img src="Images/Logo.jpeg" alt="uhambo olumyoli" width="240" height="120">
+        <img src="Images/Logo.jpeg" alt="uhambo olumyoli" width="240" height="120" loading="lazy">
     </div>
     <h1>UHAMBO OLUMYOLI</h1></div>
 </div>
@@ -19,10 +22,12 @@
 <nav class="navbar">
 <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="Services.html">Services</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-    <li><a href="Images.html">Images</a></li>
+    <li><a href="pages/About.html">About</a></li>
+    <li><a href="pages/Services.html">Services</a></li>
+    <li><a href="pages/Contact.html">Contact</a></li>
+    <li><a href="pages/Images.html">Images</a></li>
+     <li><a href="pages/enquiry.html">Enquiry</a></li>
+    <li><button onclick="logout()">Logout</button></li>
 </ul>
 </nav>
 </header>
@@ -51,13 +56,31 @@
 
   </section>
 
-   <img src="Images/Building3.jpg" alt="Construction Process" style="display: block; margin: 0 auto; width: 500px;" >
+   <img src="Images/Building3.jpg" alt="Construction Process" style="display: block; margin: 0 auto; width: 500px;" loading="lazy">
 
 </div>
+<button onclick="localStorage.removeItem('loggedIn'); localStorage.removeItem('userName'); window.location.href='pages/login.html'">Logout</button>
 </main>
 <footer>
-    <p>&copy; 2026 UHAMBO OLUMYOLI | All Rights Reserved</p>
-</footer>
+     <pr>
 
+       &copy; 2026 UHAMBO OLUMYOLI | All rights reserved
+
+        Call: +27 76 480 6849 
+
+        Email: uhambo_olumyoli@gmail.co.za
+
+        Instagram: @uhambo_olumyoli
+
+        Twitter: @uhambo_olumyoli
+        
+
+    </pr>
+</footer>
+<div class="share-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-domain.com" target="_blank">📘</a>
+  <a href="https://wa.me/?text=Check%20out%20Uhambo%20Olumyoli%20https://your-domain.com" target="_blank">💬</a>
+</div>
+<script src="JS/script.js"></script>
 </body>
 </html>

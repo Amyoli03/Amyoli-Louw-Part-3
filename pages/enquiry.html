@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Enquiry - UHAMBO OLUMYOLI</title>
+</head>
+<body>
+<header>
+    <nav>
+   <div class="brand">
+    <div class="logo">
+        <img src="../Images/Logo.jpeg" alt="uhambo olumyoli" width="240" height="120" loading="lazy">
+    </div>
+    <h1>UHAMBO OLUMYOLI</h1></div>
+</div>
+</nav>
+<nav class="navbar">
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="images.html">Images</a></li>
+     <li><a href="enquiry.html">Enquiry</a></li>
+    <li><button onclick="logout()">Logout</button></li>
+</ul>
+</nav>
+</header>
+  
+    <!-- 2-COLUMN WRAPPER: Form + Info Card -->
+    <div class="login-wrapper">
+      
+      <!-- LEFT: Enquiry Form -->
+      <div class="container">
+          <div class="form-box" id="enquiryForm">
+              <h2>Send Us An Enquiry</h2>
+              <form id="enquiryFormSubmit">
+                  <input type="text" placeholder="Full Name" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="tel" placeholder="Phone Number">
+                  <select required>
+                      <option value="" disabled selected>Select Service</option>
+                      <option>Rural Housing</option>
+                      <option>Schools & Halls</option>
+                      <option>Boreholes & Sanitation</option>
+                      <option>Skills Training</option>
+                      <option>Other</option>
+                  </select>
+                  <textarea placeholder="Tell us about your project or enquiry..." rows="5" required></textarea>
+                  <button type="submit">Send Enquiry</button>
+                  <p id="enquiryMsg" style="display:none; color:green; margin-top:10px;">✓ Thank you! We’ll get back to you soon.</p>
+              </form>
+          </div>
+      </div>
+
+      <!-- RIGHT: Info Card - same height -->
+      <div class="info-card">
+        <img src="../Images/Logo.jpeg" alt="Uhambo Olumyoli Logo" class="info-logo" loading="lazy">
+        <h2>📞 Let’s Talk</h2>
+        <p class="tagline">We’re here to help your community build better.</p>
+        
+        <h3>Contact Details</h3>
+        <p>📧 info@uhambolumyoli.co.za<br>
+        📱 +27 82 555 1234<br>
+        📍 Durban, KwaZulu-Natal</p>
+
+        <h3>Response Time</h3>
+        <p>We reply to all enquiries within 24-48 hours. For urgent projects, call us directly.</p>
+
+        <h3>Office Hours</h3>
+        <ul>
+          <li>Mon - Fri: 8:00 - 17:00</li>
+          <li>Saturday: 9:00 - 13:00</li>
+          <li>Sunday: Closed</li>
+        </ul>
+        
+        <p class="info-footer"><em>Every community deserves safe, lasting infrastructure.</em></p>
+      </div>
+
+    </div>
+
+    <!-- CUTE BEARS CONSTRUCTION ANIMATION -->
+    <div class="bears-scene">
+      <div class="bear bear-1">
+        <div class="bear-head">
+          <div class="bear-ear left"></div>
+          <div class="bear-ear right"></div>
+          <div class="bear-eye left"></div>
+          <div class="bear-eye right"></div>
+          <div class="bear-nose"></div>
+        </div>
+        <div class="bear-body">
+          <div class="bear-arm left"></div>
+          <div class="bear-arm right"></div>
+          <div class="hard-hat"></div>
+        </div>
+      </div>
+
+      <div class="bear bear-2">
+        <div class="bear-head">
+          <div class="bear-ear left"></div>
+          <div class="bear-ear right"></div>
+          <div class="bear-eye left"></div>
+          <div class="bear-eye right"></div>
+          <div class="bear-nose"></div>
+        </div>
+        <div class="bear-body">
+          <div class="bear-arm left holding-brick"></div>
+          <div class="bear-arm right"></div>
+          <div class="vest"></div>
+        </div>
+      </div>
+
+      <div class="brick-pile">
+        <div class="brick-be brick1"></div>
+        <div class="brick-be brick2"></div>
+        <div class="brick-be brick3"></div>
+        <div class="brick-be brick4"></div>
+        <div class="brick-be brick5"></div>
+      </div>
+
+      <div class="heart h1">❤️</div>
+      <div class="heart h2">🧡</div>
+      <div class="heart h3">💛</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 UHAMBO OLUMYOLI | All Rights Reserved</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+    <script>
+        // Simple enquiry form handler
+        document.getElementById('enquiryFormSubmit').addEventListener('submit', function(e){
+            e.preventDefault();
+            document.getElementById('enquiryMsg').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('enquiryMsg').style.display = 'none';
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
